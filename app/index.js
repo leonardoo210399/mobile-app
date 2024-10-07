@@ -31,15 +31,20 @@ const Home = () => {
       />
 
       <ScrollView showsVerticalScrollIndicator={false}>
-        <View>
-          <Welcome 
-             searchTerm={searchTerm}
-             setSearchTerm={setSearchTerm}
-             handleClick={() => {
-               if (searchTerm) {
-                 router.push(`/search/${searchTerm}`)
-               }
-             }}
+        <View
+          style={{
+            flex: 1,
+            padding: SIZES.medium,
+          }}
+        >
+          <Welcome
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            handleClick={() => {
+              if (searchTerm) {
+                router.push(`/search/${searchTerm}`);
+              }
+            }}
           />
 
           <Popularjobs />
